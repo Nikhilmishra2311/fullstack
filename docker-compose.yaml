@@ -14,7 +14,7 @@ services:
   backend:
     build:
       context: ./backend
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     restart: unless-stopped
     environment:
       DATABASE_URL: postgresql://postgres:12345678@db:5432/mydatabase
@@ -26,7 +26,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     restart: unless-stopped
     ports:
       - "3000:3000"
